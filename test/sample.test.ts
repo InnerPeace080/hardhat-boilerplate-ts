@@ -11,6 +11,8 @@ describe('Sample test', function () {
     [owner, ...wallets] = await ethers.getSigners();
 
     const configs = utils.processSmartContractConfig(hre.userConfig.smartContractConfig, hre, {});
+    // !!! NOTE: this override config for test example. You must remove if want to copy this code for other test
+    configs.SMART_CONTRACT_NAME = 'Greeter';
 
     // deploy contract
     const Contract = await ethers.getContractFactory(configs.SMART_CONTRACT_NAME);
