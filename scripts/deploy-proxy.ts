@@ -40,7 +40,7 @@ async function main() {
 
   const contract = await hre.upgrades.deployProxy(Contract, constructorArguments, {
     kind: 'uups',
-    unsafeAllow: ['constructor'],
+    unsafeAllow: ['constructor', 'delegatecall'],
   });
 
   console.log('Contract deploy transaction:', contract.deployTransaction.hash);
