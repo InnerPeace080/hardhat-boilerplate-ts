@@ -8,6 +8,8 @@ import '@openzeppelin/hardhat-upgrades';
 import 'hardhat-gas-trackooor';
 import 'hardhat-storage-layout';
 import 'hardhat-tracer';
+import 'solidity-coverage';
+
 import './tasks/manual-verify';
 import './tasks/prepare-upgrade';
 import './tasks/upgrade';
